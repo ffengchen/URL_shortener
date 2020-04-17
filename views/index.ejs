@@ -11,8 +11,8 @@
     <input id="original_url" type="text" placeholder="input original url here">
     <input id="code" type="text" placeholder="input brand（Selective filling）">
     <div><button onclick="add()">Add</button> </div>
-    <div><button><a class="url" id="showEdit">Edit/Delete</a></button></div>
-    <div><span class="url" id="result"></span></div>
+    <div><button><a id="showEdit">Edit/Delete</a></button></div>
+    <div><span id="result"></span></div>
     
 </div>
         
@@ -41,7 +41,7 @@
                     let data = res.data;
                     let new_url = window.location.protocol + "//" + window.location.host + "/url/"
                     $("#result").text("You can visit " + new_url + data['code']);
-                     $("#showEdit").attr('href', new_url + data['code'] + "/edit");
+                    $("#showEdit").attr('href', new_url + data['code'] + "/edit");
                 }
             }
         });
