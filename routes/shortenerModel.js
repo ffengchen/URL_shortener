@@ -1,5 +1,5 @@
 var mongoose = require("mongoose");
-mongoose.connect("mongodb://localhost:27017/shortener");
+mongoose.connect("mongodb+srv://fengchen:123@cluster0-0lpae.mongodb.net/shortener");
 
 
 var urlSchema = new mongoose.Schema({
